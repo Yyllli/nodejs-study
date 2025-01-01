@@ -96,3 +96,101 @@ rs.on('data', chunk => {
 
 // rs.pipe(ws);
 ```
+
+### 6. 文件重命名和移动
+```aiignore
+// 路径相同重命名，路径不同移动
+fs.rename('重命名前的路径', '重命名后的路径', (err) => {
+    if (err) {
+        console.log('fail', err);
+        return;
+    }
+
+    console.log('success', err)
+})
+```
+
+同步版本\
+fs.rename('oldFileNameAndPath', 'newFileNameAndPath');
+
+### 7. 文件删除
+```aiignore
+// 或者unLinkSync
+fs.unlink('./测试名称.txt', (err) => {
+    if (err) {
+        console.log('删除fail', err);
+        return;
+    }
+
+    console.log('删除success', err)
+});
+```
+
+```aiignore
+// nodejs 14.4引入 或者rmSync
+fs.rm('./测试名称.txt', (err) => {
+    if (err) {
+        console.log('删除fail', err);
+        return;
+    }
+
+    console.log('删除success', err)
+})
+```
+
+### 8. 文件夹创建
+创建文件夹 mk => make  dir => directory
+接受参数 ： 1. 文件夹路径 2. options 配置（可选） 3. callback
+```aiignore
+fs.mkdir('./新增文件夹', (err) => {
+     if (err) {
+         console.log('fail');
+         return
+     }
+     console.log('success');
+})
+```
+
+### 9. 递归创建文件夹
+```aiignore
+fs.mkdir('./a/b/c', {recursive: true}, (err) => {
+    if (err) {
+        console.log('fail');
+        return;
+    }
+    console.log('success');
+})
+```
+
+### 10. 读取文件夹
+```aiignore
+fs.readdir('./', (err, data) => {
+    if (err) {
+        console.log('fail');
+        return;
+    }
+    console.log('success', data);
+})
+```
+
+### 11. 删除文件夹
+```aiignore
+fs.rmdir('./删除文件夹', (err) => {
+    if (err) {
+        console.log('fail');
+        return;
+    }
+    console.log('success');
+})
+```
+
+### 12.递归删除文件夹
+```aiignore
+fs.rm('./a', { recursive: true }, (err) => {
+    if (err) {
+        console.log('fail', err);
+        return;
+    }
+    console.log('success');
+})
+```
