@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账本</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .record {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .record.income {
+            background-color: #e6f7e6;
+            border-left: 5px solid #52c41a;
+        }
+        .record.expense {
+            background-color: #fde8e8;
+            border-left: 5px solid #f5222d;
+        }
+        .record .date {
+            flex: 1;
+            font-weight: bold;
+        }
+        .record .description {
+            flex: 2;
+            text-align: center;
+        }
+        .record .type {
+            flex: 1;
+            text-align: right;
+            font-weight: bold;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .record .type.expense {
+            background-color: #f5222d;
+        }
+        .record .type.income {
+            background-color: #52c41a;
+        }
+        .record .amount {
+            flex: 1;
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>记账本</h1>
+    <div class="record expense">
+        <div class="date">2023-04-05</div>
+        <div class="description">抽烟只抽煊赫门，一生只爱一个人</div>
+        <div class="type expense">支出</div>
+        <div class="amount">25元</div>
+    </div>
+    <div class="record income">
+        <div class="date">2023-04-15</div>
+        <div class="description">3月份工资</div>
+        <div class="type income">收入</div>
+        <div class="amount">4396元</div>
+    </div>
+</div>
+</body>
+</html>

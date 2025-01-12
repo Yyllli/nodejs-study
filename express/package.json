@@ -1,0 +1,21 @@
+{
+  "name": "express-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "123",
+  "license": "ISC",
+  "description": "123",
+  "keywords": [
+    "123"
+  ],
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-generator": "^4.16.1",
+    "moment": "^2.30.1"
+  }
+}

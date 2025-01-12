@@ -194,3 +194,30 @@ fs.rm('./a', { recursive: true }, (err) => {
     console.log('success');
 })
 ```
+
+### 13.查看资源信息
+```aiignore
+fs.stat('./测试移动/座右铭.txt', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    
+    // isFile 检测是否为文件
+    console.log(data.isFile());
+
+    // isDirectory 检测是否为文件夹
+    console.log(data.isDirectory());
+})
+```
+
+### 14.path
+1. path.resolve   拼接规范的绝对路径 （常用)
+```aiignore
+console.log(path.resolve(__dirname, './index.html'));
+```
+2. path.sep       获取操作系统的路径分割符
+3. path.parse     解析路径并返回对象
+4. path.basename  获取路径的基础名称
+5. path.dirname   获取路径的目录名
+6. path.extname   获取路径的扩展名
